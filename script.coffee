@@ -48,7 +48,6 @@ custom = () ->
     padded = pad num, 4
   else
     padded = num
-  alert padded
   document.getElementById("PDF").src = "https://my.hrw.com/math12/na_cc/hsm_larson/student/pdf/english/alg2/alg2_cc_na_lar_12_#{padded}.pdf"
 
 toc = () ->
