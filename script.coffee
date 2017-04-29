@@ -1,8 +1,12 @@
+update = (num) ->
+  document.getElementById("customnum").value = num
+
 next = () ->
   url = document.getElementById("PDF").src
   num = url.slice 86, 90
   num = parseInt num
   num = num + 1
+  update num
   padded = pad num, 4
   document.getElementById("PDF").src = "https://my.hrw.com/math12/na_cc/hsm_larson/student/pdf/english/alg2/alg2_cc_na_lar_12_#{padded}.pdf"
 
@@ -11,6 +15,7 @@ back = () ->
   num = url.slice 86, 90
   num = parseInt num
   num = num - 1
+  update num
   padded = pad num, 4
   document.getElementById("PDF").src = "https://my.hrw.com/math12/na_cc/hsm_larson/student/pdf/english/alg2/alg2_cc_na_lar_12_#{padded}.pdf"
 
